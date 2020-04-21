@@ -1,6 +1,10 @@
 /fotos/
 /.vscode/
 /.idea/
+/yalefaces/
 /classificadorEigen.yml
 /classificadorFisher.yml
 /classificadorLbph.yml
+/classificadorEigenYale.yml
+/classificadorFisherYale.yml
+/classificadorLBPHYale.yml

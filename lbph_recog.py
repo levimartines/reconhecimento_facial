@@ -11,13 +11,13 @@ camera = cv2.VideoCapture(url)
 
 while True:
     conectado, imagem = camera.read()
-    imagemCinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
-    facesDetectadas = detectorFace.detectMultiScale(imagemCinza, scaleFactor=1.5, minSize=(30, 30))
+    imagem_cinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
+    faces_detectadas = detectorFace.detectMultiScale(imagem_cinza, scaleFactor=1.5, minSize=(30, 30))
 
-    for (x, y, l, a) in facesDetectadas:
-        imagemFace = cv2.resize(imagemCinza[y:y + a, x:x + l], (largura, altura))
+    for (x, y, l, a) in faces_detectadas:
+        imagem_face = cv2.resize(imagem_cinza[y:y + a, x:x + l], (largura, altura))
         cv2.rectangle(imagem, (x, y), (x + l, y + a), (0, 0, 255), 2)
-        id, confianca = reconhecedor.predict(imagemFace)
+        id, confianca = reconhecedor.predict(imagem_face)
         if id == 1:
             nome = "Renan"
         elif id == 2:
