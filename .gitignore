@@ -1,5 +1,6 @@
 /fotos/
 /.vscode/
+/.idea/
 /classificadorEigen.yml
 /classificadorFisher.yml
 /classificadorLbph.yml
